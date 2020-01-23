@@ -11,26 +11,18 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var myLbel: UILabel!
-    
+    let dateformatter = DateFormatter()
     private let log = Log()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let dateformatter = DateFormatter()
-
-        dateformatter.dateFormat = "HH:mm:ss"// 自定义时间格式
-
-        let time = dateformatter.string(from: Date())
-        myLbel.text = time
+       
     }
     
     func consumeLog(log: String) {
-        let dateformatter = DateFormatter()
-        dateformatter.dateFormat = "HH:mm:ss"// 自定义时间格式
+        dateformatter.dateFormat = "HH:mm:ss"
         myLbel.text = dateformatter.string(from: Date())
-        
-       }
+    }
     
     
     
@@ -42,6 +34,7 @@ class ViewController: UIViewController {
         }
     }
 }
+
 class Log {
     func requestLog(consume: (_ log: String) -> Void) {
         let slog = "Data from wherever"
