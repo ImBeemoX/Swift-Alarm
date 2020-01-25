@@ -35,20 +35,8 @@ class ViewController: UIViewController {
        }
     
     func triggerNotification(){
-        let content = UNMutableNotificationContent()
-        content.setValue("YES", forKeyPath: "shouldAlwaysAlertWhileAppIsForeground")
-        content.title = NSString.localizedUserNotificationString(forKey: "Notification Testing", arguments: nil)
-        content.body = NSString.localizedUserNotificationString(forKey: "This is a test", arguments: nil)
-        content.sound = UNNotificationSound.default
-        content.badge = (UIApplication.shared.applicationIconBadgeNumber + 1) as NSNumber;
-        let trigger = UNTimeIntervalNotificationTrigger(
-            timeInterval: 1.0,
-            repeats: false)
-
-        let request = UNNotificationRequest.init(identifier: "testTriggerNotif", content: content, trigger: trigger)
-
-        let center = UNUserNotificationCenter.current()
-        center.add(request, withCompletionHandler: nil)
+        _ = UILocalNotification()
+        
     }
     
     
