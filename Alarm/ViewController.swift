@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         UNUserNotificationCenter.current().requestAuthorization(
                       options: [.alert,.sound,.badge],
                       completionHandler: { (granted,error) in
-                          self.isGrantedNotificationAccess = granted
+                          self.isGrantedNotificationAccess =  granted
                   })
     }
     override func viewDidLoad() {
