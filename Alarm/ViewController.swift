@@ -58,7 +58,7 @@ class ViewController: UIViewController {
 }
 
 class Log {
-    func requestLog(consume: (_ log: String) -> Void) {
+    func requestLog(consume: (_ log:  String) -> Void) {
         let slog = "Data from wherever"
         consume(slog)
     }
