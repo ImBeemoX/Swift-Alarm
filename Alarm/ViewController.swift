@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { [weak self] _ in
             self?.log.requestLog{ data in
-                self?.consumeLog(log: data)
+                self?.consumeLog(log:  data)
             }
         }
     }
