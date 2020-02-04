@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     
     func consumeLog(log: String) {
         dateformatter.dateFormat = "HH:mm:ss"
-        myLbel.text = dateformatter.string(from: Date())
+        myLbel.text = dateformatter.string(from: Date( ))
         
     }
     
